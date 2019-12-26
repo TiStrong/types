@@ -32,7 +32,7 @@ function test_tableview() {
 			text: 'Row ' + (i + 1)
 		});
 		const image = Ti.UI.createImageView({
-			url: 'KS_nav_ui.png'
+			image: 'KS_nav_ui.png'
 		});
 		const button = Ti.UI.createButton({
 			right: 10,
