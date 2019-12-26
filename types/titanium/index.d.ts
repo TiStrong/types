@@ -3,7 +3,7 @@
 // Definitions by: Axway Appcelerator <https://github.com/appcelerator>
 //                 Jan Vennemann <https://github.com/janvennemann>
 //                 Sergey Volkov <https://github.com/drauggres>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// Definitions: https://github.com/TiStrong/types
 // TypeScript Version: 3.0
 
 type _Omit<T, K extends keyof any | undefined> = Pick<T, Exclude<keyof T, K>>;
