@@ -32374,6 +32374,23 @@ declare namespace Titanium {
 		 */
 		namespace Windows {
 			/**
+			 * A set of constants for the position value that can be used for the `position` property of
+			 * <ListViewAnimationProperties> when invoking the ListView's `scrollToItem`, `appendSection`,
+			 * `deleteSectionAt`, `insertSectionAt` and `replaceSectionAt` methods.
+			 */
+			namespace ListViewScrollPosition {
+				/**
+				 * The list view scrolls to the nearest edge of the row.
+				 */
+				const NONE: number;
+
+				/**
+				 * The list view scrolls to the leading edge of the row.
+				 */
+				const TOP: number;
+
+			}
+			/**
 			 * A set of constants used to create Windows system buttons.
 			 */
 			namespace SystemIcon {
@@ -34127,16 +34144,6 @@ declare namespace Titanium {
 			 */
 			class ListViewScrollPosition extends Titanium.Proxy {
 				/**
-				 * The list view scrolls to the nearest edge of the row.
-				 */
-				readonly NONE: number;
-
-				/**
-				 * The list view scrolls to the leading edge of the row.
-				 */
-				readonly TOP: number;
-
-				/**
 				 * The name of the API that this proxy corresponds to.
 				 */
 				readonly apiName: string;
@@ -35441,6 +35448,75 @@ declare namespace Titanium {
 				 * No animation.
 				 */
 				const NONE: number;
+
+			}
+			/**
+			 * A set of constants for the style that can be used for the `selectionStyle` property of a
+			 * ListItem, which is set in the `properties` dictionary of either the <ListDataItem> or
+			 * <ItemTemplate>.
+			 */
+			namespace ListViewCellSelectionStyle {
+				/**
+				 * The cell when selected has a blue background. This is the default value.
+				 */
+				const BLUE: number;
+
+				/**
+				 * The cell when selected has a gray background.
+				 */
+				const GRAY: number;
+
+				/**
+				 * The cell has no distinct style for when it is selected.
+				 */
+				const NONE: number;
+
+			}
+			/**
+			 * A set of constants for the position value that can be used for the `position` property of
+			 * <ListViewAnimationProperties> when invoking the ListView's `scrollToItem`, `appendSection`,
+			 * `deleteSectionAt`, `insertSectionAt` and `replaceSectionAt` methods.
+			 */
+			namespace ListViewScrollPosition {
+				/**
+				 * The list view scrolls the row of interest to the bottom of the visible list view.
+				 */
+				const BOTTOM: number;
+
+				/**
+				 * The list view scrolls the row of interest to the middle of the list table view.
+				 */
+				const MIDDLE: number;
+
+				/**
+				 * The table view scrolls the row of interest to be fully visible with a minimal movement.
+				 * If the row is already fully visible, no scrolling occurs. For example, if the row is above the
+				 * visible area, the behavior is identical to that specified by `TOP`. This is the default.
+				 */
+				const NONE: number;
+
+				/**
+				 * The list view scrolls the row of interest to the top of the visible list view.
+				 */
+				const TOP: number;
+
+			}
+			/**
+			 * A set of constants for the style that can be used for the `style` property of
+			 * <Titanium.UI.ListView>.
+			 */
+			namespace ListViewStyle {
+				/**
+				 * A list view whose sections present distinct groups of rows. The section headers and footers
+				 * do not float.
+				 */
+				const GROUPED: number;
+
+				/**
+				 * A plain list view. Any section headers or footers are displayed as inline separators and
+				 * float when the list view is scrolled.
+				 */
+				const PLAIN: number;
 
 			}
 			/**
@@ -39372,21 +39448,6 @@ declare namespace Titanium {
 			 */
 			class ListViewCellSelectionStyle extends Titanium.Proxy {
 				/**
-				 * The cell when selected has a blue background. This is the default value.
-				 */
-				readonly BLUE: number;
-
-				/**
-				 * The cell when selected has a gray background.
-				 */
-				readonly GRAY: number;
-
-				/**
-				 * The cell has no distinct style for when it is selected.
-				 */
-				readonly NONE: number;
-
-				/**
 				 * The name of the API that this proxy corresponds to.
 				 */
 				readonly apiName: string;
@@ -39432,28 +39493,6 @@ declare namespace Titanium {
 			 */
 			class ListViewScrollPosition extends Titanium.Proxy {
 				/**
-				 * The list view scrolls the row of interest to the bottom of the visible list view.
-				 */
-				readonly BOTTOM: number;
-
-				/**
-				 * The list view scrolls the row of interest to the middle of the list table view.
-				 */
-				readonly MIDDLE: number;
-
-				/**
-				 * The table view scrolls the row of interest to be fully visible with a minimal movement.
-				 * If the row is already fully visible, no scrolling occurs. For example, if the row is above the
-				 * visible area, the behavior is identical to that specified by `TOP`. This is the default.
-				 */
-				readonly NONE: number;
-
-				/**
-				 * The list view scrolls the row of interest to the top of the visible list view.
-				 */
-				readonly TOP: number;
-
-				/**
 				 * The name of the API that this proxy corresponds to.
 				 */
 				readonly apiName: string;
@@ -39497,18 +39536,6 @@ declare namespace Titanium {
 			 * <Titanium.UI.ListView>.
 			 */
 			class ListViewStyle extends Titanium.Proxy {
-				/**
-				 * A list view whose sections present distinct groups of rows. The section headers and footers
-				 * do not float.
-				 */
-				readonly GROUPED: number;
-
-				/**
-				 * A plain list view. Any section headers or footers are displayed as inline separators and
-				 * float when the list view is scrolled.
-				 */
-				readonly PLAIN: number;
-
 				/**
 				 * The name of the API that this proxy corresponds to.
 				 */
