@@ -510,6 +510,3 @@ declare class Identity extends Titanium.Module {
     static setAuthenticationPolicy: never;
 
 }
-
-
-import Ti = Titanium;
