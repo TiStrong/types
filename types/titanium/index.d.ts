@@ -121565,7 +121565,22 @@ declare namespace Titanium {
 		/**
 		 * The backtrace of function calls when the error occurred.
 		 */
-		backtrace: string;
+		backtrace: never;
+
+		/**
+		 * The column offset on the line where the error occured.
+		 */
+		column: number;
+
+		/**
+		 * The java stack trace of the exception.
+		 */
+		javaStack: string;
+
+		/**
+		 * The javascript stack trace of the exception.
+		 */
+		jsStack: string;
 
 		/**
 		 * The line where the error occurred.
@@ -121588,6 +121603,11 @@ declare namespace Titanium {
 		message: string;
 
 		/**
+		 * The native platform stack trace of the exception.
+		 */
+		nativeStack: string;
+
+		/**
 		 * A unique identification for the source file.
 		 */
 		sourceId: number;
@@ -121601,6 +121621,11 @@ declare namespace Titanium {
 		 * The URL to the source file.
 		 */
 		sourceURL: string;
+
+		/**
+		 * The javascript stack trace of the exception.
+		 */
+		stack: string;
 
 		/**
 		 * The title for the error.
@@ -121722,6 +121747,11 @@ declare namespace Titanium {
 		 * Application copyright statement, determined by `tiapp.xml`.
 		 */
 		static readonly copyright: string;
+
+		/**
+		 * A reference to the currnet background service running when the application is placed in the background.
+		 */
+		static readonly currentService: Titanium.App.iOS.BackgroundService;
 
 		/**
 		 * Build type that reflects how the application was packaged.
@@ -121877,6 +121907,11 @@ declare namespace Titanium {
 		 * Gets the value of the <Titanium.App.copyright> property.
 		 */
 		static getCopyright: never;
+
+		/**
+		 * Gets the value of the <Titanium.App.currentService> property.
+		 */
+		static getCurrentService: never;
 
 		/**
 		 * Gets the value of the <Titanium.App.deployType> property.
@@ -125861,7 +125896,7 @@ declare namespace Titanium {
 		/**
 		 * The currently active tab, if a tab group is open.
 		 */
-		static currentTab: Titanium.UI.Tab;
+		static currentTab: never;
 
 		/**
 		 * The active window associated with the executing JavaScript context.
