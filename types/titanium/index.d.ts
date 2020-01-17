@@ -100958,7 +100958,7 @@ declare namespace Titanium {
 			/**
 			 * Sets the data in the table.
 			 */
-			setData(data: Titanium.UI.TableViewRow[] | Array<Dictionary<Titanium.UI.TableViewRow>> | Titanium.UI.TableViewSection[], animation: TableViewAnimationProperties): void;
+			setData(data: Titanium.UI.TableViewRow[] | Array<Dictionary<Titanium.UI.TableViewRow>> | Titanium.UI.TableViewSection[], animation?: TableViewAnimationProperties): void;
 
 			/**
 			 * Sets the value of the <Titanium.UI.TableView.dimBackgroundForSearch> property.
