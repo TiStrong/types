@@ -520,7 +520,7 @@ interface Console {
 	/**
 	 * Log duration taken so far for an operation.
 	 */
-	timeLog(label?: string, data?: any): void;
+	timeLog(label?: string, ...data: any[]): void;
 
 	/**
 	 * Log a message at the `warn` level.
@@ -1177,7 +1177,7 @@ interface String {
 	/**
 	 * Formats a string using `printf`-style substitution.
 	 */
-	format(formatString: string, value: string | number): string;
+	format(formatString: string, ...value: Array<string | number>): string;
 
 	/**
 	 * Formats a number into the currency format, including currency symbol, of the locale
@@ -13045,7 +13045,22 @@ declare namespace Titanium {
 			/**
 			 * Executes an SQL statement against the database and returns a `ResultSet`.
 			 */
+			execute(sql: string, ...vararg: string[]): Titanium.Database.ResultSet;
+
+			/**
+			 * Executes an SQL statement against the database and returns a `ResultSet`.
+			 */
+			execute(sql: string, vararg?: ReadonlyArray<string>): Titanium.Database.ResultSet;
+
+			/**
+			 * Executes an SQL statement against the database and returns a `ResultSet`.
+			 */
 			execute(sql: string, ...vararg: any[]): Titanium.Database.ResultSet;
+
+			/**
+			 * Executes an SQL statement against the database and returns a `ResultSet`.
+			 */
+			execute(sql: string, vararg?: ReadonlyArray<any>): Titanium.Database.ResultSet;
 
 			/**
 			 * Synchronously executes an array of SQL statements against the database and returns an array of `ResultSet`.
@@ -79615,7 +79630,7 @@ declare namespace Titanium {
 		/**
 		 * Returns a `Blob` object representing the asset catalog image identified by the path arguments.
 		 */
-		static getAsset(path: string): Titanium.Blob;
+		static getAsset(...path: string[]): Titanium.Blob;
 
 		/**
 		 * Gets the value of the <Titanium.Filesystem.bubbleParent> property.
@@ -79632,7 +79647,12 @@ declare namespace Titanium {
 		/**
 		 * Returns a `File` object representing the file identified by the path arguments.
 		 */
-		static getFile(...paths: string[]): Titanium.Filesystem.File;
+		static getFile(...path: string[]): Titanium.Filesystem.File;
+
+		/**
+		 * Returns a `File` object representing the file identified by the path arguments.
+		 */
+		static getFile(path: ReadonlyArray<string>): Titanium.Filesystem.File;
 
 		/**
 		 * Gets the value of the <Titanium.Filesystem.lifecycleContainer> property.
