@@ -1113,12 +1113,6 @@ interface GetUserNotificationSettings {
  * The APIs that reside in the global scope, which may be called without a namespace prefix.
  */
 /**
- * An intrinsic object that provides functions to convert JavaScript values to and from
- * the JavaScript Object Notation (JSON) format.
- */
-declare var JSON: JSON;
-
-/**
  * Console logging facilities.
  */
 declare var console: Console;
@@ -1360,21 +1354,6 @@ interface ItemTemplate {
 	 * Contains key-value pairs of view properties and their values that are applied to the ListItem.
 	 */
 	properties?: Dictionary<Titanium.UI.ListItem>;
-
-}
-/**
- * Global JSON object providing the [parse](JSON.parse) and [stringify](JSON.stringify) methods.
- */
-interface JSON {
-	/**
-	 * Parses a JSON text to produce an object or array.
-	 */
-	parse(text: string, reviver: (...args: any[]) => void): any;
-
-	/**
-	 * Produces a JSON text from a JavaScript value.
-	 */
-	stringify(value: any, replacer?: (...args: any[]) => void | string[], space?: number | string): string;
 
 }
 /**
