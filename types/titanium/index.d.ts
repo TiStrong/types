@@ -2441,6 +2441,180 @@ interface PushNotificationSuccessArg extends SuccessResponse {
 
 }
 /**
+ * The Titanium binding of the native Android `R` class, giving access to Android system-wide
+ * resources or application resources.
+ */
+declare class RProxy extends Titanium.Proxy {
+	/**
+	 * Animation resources. See
+	 * [R.anim](https://developer.android.com/reference/android/R.anim.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly anim?: any;
+
+	/**
+	 * Animator resources. See
+	 * [R.animator](https://developer.android.com/reference/android/R.animator.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly animator?: any;
+
+	/**
+	 * Array resources. See [R.array](https://developer.android.com/reference/android/R.array.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly array?: any;
+
+	/**
+	 * Attribute resources. See
+	 * [R.attr](https://developer.android.com/reference/android/R.attr.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly attr?: any;
+
+	/**
+	 * Boolean resources. See
+	 * [R.bool](https://developer.android.com/reference/android/R.bool.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly bool?: any;
+
+	/**
+	 * Color resources. See
+	 * [R.color](https://developer.android.com/reference/android/R.color.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly color?: any;
+
+	/**
+	 * Dimension resources.  See
+	 * [https://developer.android.com/reference/android/R.dimen.html](https://developer.android.com/reference/android/R.dimen.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly dimen?: any;
+
+	/**
+	 * Drawable resources. See
+	 * [R.drawable](https://developer.android.com/reference/android/R.drawable.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly drawable?: any;
+
+	/**
+	 * Fraction resources. See
+	 * [R.fraction](https://developer.android.com/reference/android/R.fraction.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly fraction?: any;
+
+	/**
+	 * ID resources.  See
+	 * [R.id](https://developer.android.com/reference/android/R.id.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly id?: any;
+
+	/**
+	 * Integer resources. See
+	 * [R.integer](https://developer.android.com/reference/android/R.integer.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly integer?: any;
+
+	/**
+	 * Interpolator resources. See
+	 * [R.fraction](https://developer.android.com/reference/android/R.interpolator.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly interpolator?: any;
+
+	/**
+	 * Layout resources. See
+	 * [R.layout](https://developer.android.com/reference/android/R.layout.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly layout?: any;
+
+	/**
+	 * Menu resources. See
+	 * [R.menu](https://developer.android.com/reference/android/R.menu.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly menu?: any;
+
+	/**
+	 * Mipmap resources. See
+	 * [R.mipmap](https://developer.android.com/reference/android/R.mipmap.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly mipmap?: any;
+
+	/**
+	 * Plurals resources. See
+	 * [R.plurals](https://developer.android.com/reference/android/R.plurals.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly plurals?: any;
+
+	/**
+	 * Raw resources. See
+	 * [R.raw](https://developer.android.com/reference/android/R.raw.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly raw?: any;
+
+	/**
+	 * String resources. See
+	 * [R.string](https://developer.android.com/reference/android/R.string.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly string?: any;
+
+	/**
+	 * Style resources. See
+	 * [R.style](https://developer.android.com/reference/android/R.style.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly style?: any;
+
+	/**
+	 * Styleable resources. See
+	 * [R.styleable](https://developer.android.com/reference/android/R.styleable.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly styleable?: any;
+
+	/**
+	 * Transition resources. See
+	 * [R.transition](https://developer.android.com/reference/android/R.transition.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly transition?: any;
+
+	/**
+	 * XML resources. See
+	 * [R.xml](https://developer.android.com/reference/android/R.xml.html)
+	 * in the Android Developer Reference.
+	 */
+	readonly xml?: any;
+
+	/**
+	 * Adds the specified callback as an event listener for the named event.
+	 */
+	addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+	/**
+	 * Fires a synthesized event to any registered listeners.
+	 */
+	fireEvent(name: string, event?: any): void;
+
+	/**
+	 * Removes the specified callback as an event listener for the named event.
+	 */
+	removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+}
+/**
  * Argument passed to the read callback when an asynchronous [read](Titanium.Stream.read) operation
  * finishes.
  */
@@ -3970,6 +4144,11 @@ declare namespace Titanium {
 		 * Use for expired events.
 		 */
 		const PRIORITY_MIN: number;
+
+		/**
+		 * Accessor for Android system resources.
+		 */
+		const R: RProxy;
 
 		/**
 		 * Used with [setResult](Titanium.Android.Activity.setResult) to specify that
@@ -6640,179 +6819,6 @@ declare namespace Titanium {
 
 		}
 		/**
-		 * The Titanium binding of the Android system-wide resources class.
-		 */
-		class R extends Titanium.Proxy {
-			/**
-			 * Animation resources. See
-			 * [R.anim](https://developer.android.com/reference/android/R.anim.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly anim: any;
-
-			/**
-			 * Animator resources. See
-			 * [R.animator](https://developer.android.com/reference/android/R.animator.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly animator: any;
-
-			/**
-			 * Array resources. See [R.array](https://developer.android.com/reference/android/R.array.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly array: any;
-
-			/**
-			 * Attribute resources. See
-			 * [R.attr](https://developer.android.com/reference/android/R.attr.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly attr: any;
-
-			/**
-			 * Boolean resources. See
-			 * [R.bool](https://developer.android.com/reference/android/R.bool.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly bool: any;
-
-			/**
-			 * Color resources. See
-			 * [R.color](https://developer.android.com/reference/android/R.color.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly color: any;
-
-			/**
-			 * Dimension resources.  See
-			 * [https://developer.android.com/reference/android/R.dimen.html](https://developer.android.com/reference/android/R.dimen.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly dimen: any;
-
-			/**
-			 * Drawable resources. See
-			 * [R.drawable](https://developer.android.com/reference/android/R.drawable.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly drawable: any;
-
-			/**
-			 * Fraction resources. See
-			 * [R.fraction](https://developer.android.com/reference/android/R.fraction.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly fraction: any;
-
-			/**
-			 * ID resources.  See
-			 * [R.id](https://developer.android.com/reference/android/R.id.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly id: any;
-
-			/**
-			 * Integer resources. See
-			 * [R.integer](https://developer.android.com/reference/android/R.integer.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly integer: any;
-
-			/**
-			 * Interpolator resources. See
-			 * [R.fraction](https://developer.android.com/reference/android/R.interpolator.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly interpolator: any;
-
-			/**
-			 * Layout resources. See
-			 * [R.layout](https://developer.android.com/reference/android/R.layout.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly layout: any;
-
-			/**
-			 * Menu resources. See
-			 * [R.menu](https://developer.android.com/reference/android/R.menu.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly menu: any;
-
-			/**
-			 * Mipmap resources. See
-			 * [R.mipmap](https://developer.android.com/reference/android/R.mipmap.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly mipmap: any;
-
-			/**
-			 * Plurals resources. See
-			 * [R.plurals](https://developer.android.com/reference/android/R.plurals.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly plurals: any;
-
-			/**
-			 * Raw resources. See
-			 * [R.raw](https://developer.android.com/reference/android/R.raw.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly raw: any;
-
-			/**
-			 * String resources. See
-			 * [R.string](https://developer.android.com/reference/android/R.string.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly string: any;
-
-			/**
-			 * Style resources. See
-			 * [R.style](https://developer.android.com/reference/android/R.style.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly style: any;
-
-			/**
-			 * Styleable resources. See
-			 * [R.styleable](https://developer.android.com/reference/android/R.styleable.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly styleable: any;
-
-			/**
-			 * Transition resources. See
-			 * [R.transition](https://developer.android.com/reference/android/R.transition.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly transition: any;
-
-			/**
-			 * XML resources. See
-			 * [R.xml](https://developer.android.com/reference/android/R.xml.html)
-			 * in the Android Developer Reference.
-			 */
-			readonly xml: any;
-
-			/**
-			 * Adds the specified callback as an event listener for the named event.
-			 */
-			addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			/**
-			 * Fires a synthesized event to any registered listeners.
-			 */
-			fireEvent(name: string, event?: any): void;
-
-			/**
-			 * Removes the specified callback as an event listener for the named event.
-			 */
-			removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-		}
-		/**
 		 * The Titanium binding of [Android RemoteViews](https://developer.android.com/reference/android/widget/RemoteViews.html).
 		 */
 		class RemoteViews extends Titanium.Proxy {
@@ -7096,31 +7102,6 @@ declare namespace Titanium {
 		 */
 		const EVENT_ACCESSIBILITY_CHANGED: string;
 
-		/**
-		 * A module used to access Android application resources.
-		 */
-		namespace Android {
-			/**
-			 * The Titanium binding of the native Android `R` class, giving access to application resources.
-			 */
-			class R extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-		}
 		/**
 		 * The top-level App iOS module, available only to iOS devices, that includes the facilities to
 		 * create and manage local notifications and background services.
@@ -10120,6 +10101,11 @@ declare namespace Titanium {
 		 * A module used to access Android application resources.
 		 */
 		class Android extends Titanium.Module {
+			/**
+			 * The `R` namespace for application resources.
+			 */
+			static readonly R: RProxy;
+
 			/**
 			 * The name of the API that this proxy corresponds to.
 			 */
@@ -26040,6 +26026,21 @@ declare namespace Titanium {
 				 */
 				const SECURE_TEXT_INPUT: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the animation styles used for view transitions.
@@ -26093,6 +26094,21 @@ declare namespace Titanium {
 				 * No animation.
 				 */
 				const NONE: number;
+
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -26183,6 +26199,21 @@ declare namespace Titanium {
 				 */
 				const PLAIN: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the Animation Styles used for transition on table view rows.
@@ -26222,6 +26253,21 @@ declare namespace Titanium {
 				 */
 				const TOP: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the styles available for scrollbars used with <Titanium.UI.ScrollView.scrollIndicatorStyle> and <Titanium.UI.TableView.scrollIndicatorStyle> properties.
@@ -26244,6 +26290,21 @@ declare namespace Titanium {
 				 * a black content background.
 				 */
 				const WHITE: number;
+
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -26284,6 +26345,21 @@ declare namespace Titanium {
 				 * Status bar style to use with dark backgrounds.
 				 */
 				const LIGHT_CONTENT: number;
+
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -26444,6 +26520,21 @@ declare namespace Titanium {
 				 */
 				const PLAIN: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the system icon styles that can be used on a tab group tab.
@@ -26509,6 +26600,21 @@ declare namespace Titanium {
 				 */
 				const TOP_RATED: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the style that can be used for the `selectionStyle` property of
@@ -26529,6 +26635,21 @@ declare namespace Titanium {
 				 * The cell has no distinct style for when it is selected.
 				 */
 				const NONE: number;
+
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -26556,6 +26677,21 @@ declare namespace Titanium {
 				 */
 				const TOP: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * A set of constants for the style that can be used for the `style` property of
@@ -26580,33 +26716,27 @@ declare namespace Titanium {
 				 */
 				const PLAIN: number;
 
+				/**
+				 * Adds the specified callback as an event listener for the named event.
+				 */
+				function addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
+				/**
+				 * Fires a synthesized event to any registered listeners.
+				 */
+				function fireEvent(name: string, event?: any): void;
+
+				/**
+				 * Removes the specified callback as an event listener for the named event.
+				 */
+				function removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
+
 			}
 			/**
 			 * The AdView is a view for display Apple iAds.
 			 * @deprecated iAd has been deprecated in iOS 10 and SDK 5.5.0. It was removed as part of the SDK 7.0.0.
 			 */
 			const AdView: never;
-			/**
-			 * A set of constants for the style that can be used for the `style` property of
-			 * <Titanium.UI.AlertDialog>.
-			 */
-			class AlertDialogStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
 			/**
 			 * Dynamic behavior to support connections between an anchor point and an item.
 			 */
@@ -26727,35 +26857,6 @@ declare namespace Titanium {
 				 * @deprecated Set the value using <Titanium.UI.iOS.AnchorAttachmentBehavior.offset> instead.
 				 */
 				setOffset(offset: Point): void;
-
-			}
-			/**
-			 * A set of constants for the animation styles used for view transitions.
-			 * One of the group of animation style constants
-			 *   * [CURL_DOWN](Titanium.UI.iOS.AnimationStyle.CURL_DOWN)
-			 *   * [CURL_UP](Titanium.UI.iOS.AnimationStyle.CURL_UP)
-			 *   * [FLIP_FROM_LEFT](Titanium.UI.iOS.AnimationStyle.FLIP_FROM_LEFT)
-			 *   * [FLIP_FROM_RIGHT](Titanium.UI.iOS.AnimationStyle.FLIP_FROM_RIGHT)
-			 *   * [FLIP_FROM_TOP](Titanium.UI.iOS.AnimationStyle.FLIP_FROM_TOP)
-			 *   * [FLIP_FROM_BOTTOM](Titanium.UI.iOS.AnimationStyle.FLIP_FROM_BOTTOM)
-			 *   * [CROSS_DISSOLVE](Titanium.UI.iOS.AnimationStyle.CROSS_DISSOLVE)
-			 *   * [NONE](Titanium.UI.iOS.AnimationStyle.NONE)
-			 */
-			class AnimationStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -28715,137 +28816,6 @@ declare namespace Titanium {
 				 * @deprecated Set the value using <Titanium.UI.iOS.GravityBehavior.magnitude> instead.
 				 */
 				setMagnitude(magnitude: number): void;
-
-			}
-			/**
-			 * A set of constants for the style that can be used for the `selectionStyle` property of a
-			 * ListItem, which is set in the `properties` dictionary of either the <ListDataItem> or
-			 * <ItemTemplate>.
-			 */
-			class ListViewCellSelectionStyle extends Titanium.Proxy {
-				/**
-				 * Indicates if the proxy will bubble an event to its parent.
-				 */
-				bubbleParent: never;
-
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener: never;
-
-				/**
-				 * Applies the properties to the proxy.
-				 */
-				applyProperties: never;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent: never;
-
-				/**
-				 * Gets the value of the <Titanium.UI.iOS.ListViewCellSelectionStyle.bubbleParent> property.
-				 * @deprecated Access <Titanium.UI.iOS.ListViewCellSelectionStyle.bubbleParent> instead.
-				 */
-				getBubbleParent: never;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener: never;
-
-				/**
-				 * Sets the value of the <Titanium.UI.iOS.ListViewCellSelectionStyle.bubbleParent> property.
-				 * @deprecated Set the value using <Titanium.UI.iOS.ListViewCellSelectionStyle.bubbleParent> instead.
-				 */
-				setBubbleParent: never;
-
-			}
-			/**
-			 * A set of constants for the position value that can be used for the `position` property of
-			 * <ListViewAnimationProperties> when invoking the ListView's `scrollToItem`, `appendSection`,
-			 * `deleteSectionAt`, `insertSectionAt` and `replaceSectionAt` methods.
-			 */
-			class ListViewScrollPosition extends Titanium.Proxy {
-				/**
-				 * Indicates if the proxy will bubble an event to its parent.
-				 */
-				bubbleParent: never;
-
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener: never;
-
-				/**
-				 * Applies the properties to the proxy.
-				 */
-				applyProperties: never;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent: never;
-
-				/**
-				 * Gets the value of the <Titanium.UI.iOS.ListViewScrollPosition.bubbleParent> property.
-				 * @deprecated Access <Titanium.UI.iOS.ListViewScrollPosition.bubbleParent> instead.
-				 */
-				getBubbleParent: never;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener: never;
-
-				/**
-				 * Sets the value of the <Titanium.UI.iOS.ListViewScrollPosition.bubbleParent> property.
-				 * @deprecated Set the value using <Titanium.UI.iOS.ListViewScrollPosition.bubbleParent> instead.
-				 */
-				setBubbleParent: never;
-
-			}
-			/**
-			 * A set of constants for the style that can be used for the `style` property of
-			 * <Titanium.UI.ListView>.
-			 */
-			class ListViewStyle extends Titanium.Proxy {
-				/**
-				 * Indicates if the proxy will bubble an event to its parent.
-				 */
-				bubbleParent: never;
-
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener: never;
-
-				/**
-				 * Applies the properties to the proxy.
-				 */
-				applyProperties: never;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent: never;
-
-				/**
-				 * Gets the value of the <Titanium.UI.iOS.ListViewStyle.bubbleParent> property.
-				 * @deprecated Access <Titanium.UI.iOS.ListViewStyle.bubbleParent> instead.
-				 */
-				getBubbleParent: never;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener: never;
-
-				/**
-				 * Sets the value of the <Titanium.UI.iOS.ListViewStyle.bubbleParent> property.
-				 * @deprecated Set the value using <Titanium.UI.iOS.ListViewStyle.bubbleParent> instead.
-				 */
-				setBubbleParent: never;
 
 			}
 			/**
@@ -30828,26 +30798,6 @@ declare namespace Titanium {
 
 			}
 			/**
-			 * A set of constants for the bar styles used on the `style` property of <Titanium.UI.ProgressBar>.
-			 */
-			class ProgressBarStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
 			 * Continuous or instantaneous force to apply to an item.
 			 */
 			class PushBehavior extends Titanium.Proxy {
@@ -30971,46 +30921,6 @@ declare namespace Titanium {
 				 * @deprecated Set the value using <Titanium.UI.iOS.PushBehavior.pushMode> instead.
 				 */
 				setPushMode(pushMode: number): void;
-
-			}
-			/**
-			 * A set of constants for the Animation Styles used for transition on table view rows.
-			 */
-			class RowAnimationStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
-			 * A set of constants for the styles available for scrollbars used with <Titanium.UI.ScrollView.scrollIndicatorStyle> and <Titanium.UI.TableView.scrollIndicatorStyle> properties.
-			 */
-			class ScrollIndicatorStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -31768,26 +31678,6 @@ declare namespace Titanium {
 				 * @deprecated Set the value using <Titanium.UI.iOS.SplitWindow.transitionAnimation> instead.
 				 */
 				setTransitionAnimation: never;
-
-			}
-			/**
-			 * A set of constants for the status bar style.
-			 */
-			class StatusBar extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
@@ -32624,46 +32514,6 @@ declare namespace Titanium {
 
 			}
 			/**
-			 * A set of constants for the system button styles that can be used for the button `style` property.
-			 */
-			class SystemButtonStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
-			 * A set of constants for the system icon styles that can be used on a tab group tab.
-			 */
-			class SystemIcon extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
 			 * Base event for class Titanium.UI.iOS.TabbedBar
 			 */
 			interface TabbedBarBaseEvent extends Ti.Event {
@@ -33244,69 +33094,6 @@ declare namespace Titanium {
 				 * @deprecated Set the value using <Titanium.UI.iOS.TabbedBar.style> instead.
 				 */
 				setStyle(style: number): void;
-
-			}
-			/**
-			 * A set of constants for the style that can be used for the `selectionStyle` property of
-			 * <Titanium.UI.TableViewRow>.
-			 */
-			class TableViewCellSelectionStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
-			 * A set of constants for the position value that can be used for the `position` property of
-			 * <Titanium.UI.TableView> when invoking `scrollToIndex`.
-			 */
-			class TableViewScrollPosition extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-			}
-			/**
-			 * A set of constants for the style that can be used for the `style` property of
-			 * <Titanium.UI.TableView> and <Titanium.UI.ListView>.
-			 */
-			class TableViewStyle extends Titanium.Proxy {
-				/**
-				 * Adds the specified callback as an event listener for the named event.
-				 */
-				addEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
-
-				/**
-				 * Fires a synthesized event to any registered listeners.
-				 */
-				fireEvent(name: string, event?: any): void;
-
-				/**
-				 * Removes the specified callback as an event listener for the named event.
-				 */
-				removeEventListener(name: string, callback: (param0: Titanium.Event) => void): void;
 
 			}
 			/**
