@@ -123,7 +123,7 @@ interface Attribute {
 	/**
 	 * Attribute value.
 	 */
-	value: number;
+	value: string | number;
 
 }
 /**
