@@ -123,7 +123,7 @@ interface Attribute {
 	/**
 	 * Attribute value.
 	 */
-	value?: string | number;
+	value: string | number;
 
 }
 /**
@@ -29450,7 +29450,7 @@ declare namespace Titanium {
 				/**
 				 * The items of the menu popup.
 				 */
-				items: string;
+				items: string[];
 
 				/**
 				 * Adds the specified callback as an event listener for the named event.
@@ -29476,7 +29476,7 @@ declare namespace Titanium {
 				 * Gets the value of the <Titanium.UI.iOS.MenuPopup.items> property.
 				 * @deprecated Access <Titanium.UI.iOS.MenuPopup.items> instead.
 				 */
-				getItems(): string;
+				getItems(): string[];
 
 				/**
 				 * Hides the menu popup.
@@ -29502,7 +29502,7 @@ declare namespace Titanium {
 				 * Sets the value of the <Titanium.UI.iOS.MenuPopup.items> property.
 				 * @deprecated Set the value using <Titanium.UI.iOS.MenuPopup.items> instead.
 				 */
-				setItems(items: string): void;
+				setItems(items: ReadonlyArray<string>): void;
 
 				/**
 				 * Shows the menu popup.
