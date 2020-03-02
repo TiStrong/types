@@ -67704,7 +67704,7 @@ declare namespace Titanium {
 			 * Array of toolbar button objects or a [toolbar](Titanium.UI.iOS.Toolbar) to be used when the
 			 * keyboard is displayed.
 			 */
-			keyboardToolbar: Titanium.UI.View[] | Titanium.UI.iOS.Toolbar;
+			keyboardToolbar: Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar;
 
 			/**
 			 * Color of the keyboard toolbar if keyboardToolbar is an array, as a color name or hex triplet.
@@ -67946,7 +67946,7 @@ declare namespace Titanium {
 			 * Gets the value of the <Titanium.UI.TextArea.keyboardToolbar> property.
 			 * @deprecated Access <Titanium.UI.TextArea.keyboardToolbar> instead.
 			 */
-			getKeyboardToolbar(): Titanium.UI.View[] | Titanium.UI.iOS.Toolbar;
+			getKeyboardToolbar(): Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar;
 
 			/**
 			 * Gets the value of the <Titanium.UI.TextArea.keyboardToolbarColor> property.
@@ -68192,7 +68192,7 @@ declare namespace Titanium {
 			 * Sets the value of the <Titanium.UI.TextArea.keyboardToolbar> property.
 			 * @deprecated Set the value using <Titanium.UI.TextArea.keyboardToolbar> instead.
 			 */
-			setKeyboardToolbar(keyboardToolbar: Titanium.UI.View[] | Titanium.UI.iOS.Toolbar): void;
+			setKeyboardToolbar(keyboardToolbar: Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar): void;
 
 			/**
 			 * Sets the value of the <Titanium.UI.TextArea.keyboardToolbarColor> property.
@@ -68941,7 +68941,7 @@ declare namespace Titanium {
 			 * Array of toolbar button objects or a [toolbar](Titanium.UI.iOS.Toolbar) to be used when the
 			 * keyboard is displayed.
 			 */
-			keyboardToolbar: Titanium.UI.View[] | Titanium.UI.iOS.Toolbar;
+			keyboardToolbar: Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar;
 
 			/**
 			 * Color of the keyboard toolbar if keyboardToolbar is an array, as a color name or hex triplet.
@@ -69239,7 +69239,7 @@ declare namespace Titanium {
 			 * Gets the value of the <Titanium.UI.TextField.keyboardToolbar> property.
 			 * @deprecated Access <Titanium.UI.TextField.keyboardToolbar> instead.
 			 */
-			getKeyboardToolbar(): Titanium.UI.View[] | Titanium.UI.iOS.Toolbar;
+			getKeyboardToolbar(): Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar;
 
 			/**
 			 * Gets the value of the <Titanium.UI.TextField.keyboardToolbarColor> property.
@@ -69545,7 +69545,7 @@ declare namespace Titanium {
 			 * Sets the value of the <Titanium.UI.TextField.keyboardToolbar> property.
 			 * @deprecated Set the value using <Titanium.UI.TextField.keyboardToolbar> instead.
 			 */
-			setKeyboardToolbar(keyboardToolbar: Titanium.UI.View[] | Titanium.UI.iOS.Toolbar): void;
+			setKeyboardToolbar(keyboardToolbar: Titanium.UI.View[] | Titanium.UI.Toolbar | Titanium.UI.iOS.Toolbar): void;
 
 			/**
 			 * Sets the value of the <Titanium.UI.TextField.keyboardToolbarColor> property.
