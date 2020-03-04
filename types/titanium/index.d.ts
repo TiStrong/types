@@ -2441,10 +2441,10 @@ interface PushNotificationSuccessArg extends SuccessResponse {
 
 }
 /**
- * The Titanium binding of the native Android `R` class, giving access to Android system-wide
- * resources or application resources.
+ * The Titanium binding of the native Android `R` class, giving access to
+ * Android system-wide resources or application resources.
  */
-declare class RProxy extends Titanium.Proxy {
+declare class R extends Titanium.Proxy {
 	/**
 	 * Animation resources. See
 	 * [R.anim](https://developer.android.com/reference/android/R.anim.html)
@@ -4148,7 +4148,7 @@ declare namespace Titanium {
 		/**
 		 * Accessor for Android system resources.
 		 */
-		const R: RProxy;
+		const R: R;
 
 		/**
 		 * Used with [setResult](Titanium.Android.Activity.setResult) to specify that
@@ -10104,7 +10104,7 @@ declare namespace Titanium {
 			/**
 			 * The `R` namespace for application resources.
 			 */
-			static readonly R: RProxy;
+			static readonly R: R;
 
 			/**
 			 * The name of the API that this proxy corresponds to.
