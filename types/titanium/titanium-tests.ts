@@ -87,7 +87,7 @@ function test_network() {
 }
 
 function test_android_r() {
-    const systemAcon = Ti.Android.R.drawable.icon;
+    const systemIcon = Ti.Android.R.drawable.icon;
     const appIcon = Ti.App.Android.R.drawable.icon;
 }
 
@@ -161,4 +161,18 @@ function test_string_extension() {
     String.formatDecimal(12.04, '%d');
     String.formatDecimal(12.04, 'en-US', '%d');
     String.formatTime(new Date(), 'medium');
+}
+
+function test_media() {
+    Ti.Media.openPhotoGallery({
+        allowMultiple: true,
+        success: (result: CameraMediaMultipleItemsType) => {
+            console.log(`Selected ${result.images.length} photos!`);
+        }
+    });
+}
+
+async function test_permissions() {
+  const result: RequestPermissionAccessResult = await Ti.Android.requestPermissions('SOME_PERMISSION');
+  console.log(result.success);
 }
